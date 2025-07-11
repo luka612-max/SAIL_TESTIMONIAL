@@ -1,0 +1,87 @@
+/* Base reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(-45deg, #e0f7ff, #fbe7ff, #e6f2ff, #fff0f5);
+  background-size: 400% 400%;
+  animation: gradientMove 10s ease infinite;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  color: #2c3e50;
+}
+
+/* Gradient animation */
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Header */
+header {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 30px;
+  color: #34495e;
+}
+
+/* Labels */
+p {
+  font-size: 1.1rem;
+  margin: 10px 0 5px;
+}
+
+/* Professor name */
+#prof-name {
+  font-weight: 600;
+  color: #3498db;
+  font-size: 1.2rem;
+}
+
+/* Textarea styling */
+textarea {
+  width: 100%;
+  max-width: 400px;
+  height: 120px;
+  padding: 12px;
+  font-size: 1rem;
+  border: 2px solid #3498db;
+  border-radius: 10px;
+  outline: none;
+  resize: vertical;
+  background-color: #ffffffcc;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: border 0.3s ease;
+}
+
+textarea:focus {
+  border-color: #2980b9;
+}
+
+/* Submit button */
+button {
+  margin-top: 20px;
+  padding: 12px 24px;
+  font-size: 1rem;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #2980b9;
+  transform: scale(1.03);
+}
