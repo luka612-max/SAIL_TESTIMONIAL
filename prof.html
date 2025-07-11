@@ -10,21 +10,24 @@
 <body>
   <div class="container">
     <h1>Select a Professor to Write a Testimonial</h1>
-
+    <input type="text" id="search" placeholder="Search for a professor..." list="professors" />
+    <datalist id="professors"></datalist>
+    <button id="search-btn" onclick="">Search</button>
     <div class="prof-container">
-      <div class="prof-card">
+      <p id="p2">No professors found matching your search.</p>
+      <div class="prof-card" data-name="Prof 1">
         <img src="prof1.jpg" alt="Prof 1">
         <a href="testimonial.html?prof=prof1">Prof 1</a>
       </div>
-      <div class="prof-card">
+      <div class="prof-card" data-name="Prof 2">
         <img src="prof2.jpg" alt="Prof 2">
         <a href="testimonial.html?prof=prof2">Prof 2</a>
       </div>
-      <div class="prof-card">
+      <div class="prof-card" data-name="Prof 3">
         <img src="prof3.jpg" alt="Prof 3">
         <a href="testimonial.html?prof=prof3">Prof 3</a>
       </div>
-      <div class="prof-card">
+      <div class="prof-card" data-name="Prof 4">
         <img src="prof4.jpg" alt="Prof 4">
         <a href="testimonial.html?prof=prof4">Prof 4</a>
       </div>
