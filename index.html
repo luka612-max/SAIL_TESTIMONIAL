@@ -8,13 +8,17 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+    <div class="wrapper">
     <header>
     <div class="navbar">
-  <div class="navbar-content">
+   <div class="navbar-content">
     <div class="navbar-content-logo">
       <a href="/sail/">
-        <img src="./static/media/sail white logo 1.1a5b5ee342209483926a85aa53969a1f.svg" alt="logo">
+        <img src="https://iitg.ac.in/sail/static/media/sail%20white%20logo%201.1a5b5ee342209483926a85aa53969a1f.svg" alt="logo">
       </a>
+    </div>
+    <div class="navbar-content-title">
+      <p>Gratuity Portal</p>
     </div>
     <div class="navbar-hamburger ">
       <div></div>
@@ -22,45 +26,35 @@
       <div></div>
     </div>
     <div class="navbar-content-links ">
-      <a href="/sail/" class="navbar-content-links-a">Home</a>
-      <a href="/sail/about" class="navbar-content-links-a">About Us</a>
-      <div class="navbar-dropdown">
-        <p class="navbar-content-links-a">Initiative <img src="./static/media/dropdown_arrow.c4cedf650f7a106fd81490c7df1f580b.svg" alt="dropdown"></p>
-      </div>
-      <div class="navbar-dropdown">
-        <p class="navbar-content-links-a">Events <img src="./static/media/dropdown_arrow.c4cedf650f7a106fd81490c7df1f580b.svg" alt="dropdown"></p>
-      </div>
-      <div class="navbar-dropdown">
-        <p class="navbar-content-links-a">Yearbook <img src="./static/media/dropdown_arrow.c4cedf650f7a106fd81490c7df1f580b.svg" alt="dropdown"></p>
-      </div>
-      <a href="/sail/#service" class="navbar-content-links-a">Services</a>
-      <button class="navbar-content-links-button"><a href="https://www.iitg.ac.in/aer/donation.php">Donate</a></button>
+      <a id="Fm" href="https://www.iitg.ac.in/iitg_faculty_all" class="navbar-content-links-a" target="_blank" rel="noopener noreferrer">Facuilty Members</a>
+      <button id="vs" class="navbar-content-links-button-1"><a href="https://www.iitg.ac.in/aer/donation.php" target="_blank" rel="noopener noreferrer">Visit SAIL</a></button>
+      <button class="navbar-content-links-button"><a href="https://www.iitg.ac.in/aer/donation.php" target="_blank" rel="noopener noreferrer">Donate</a></button>
     </div>
   </div>
 </div>
   </header>
-    <main>
-    <h1>Welcome to Gratuity Portal</h1>
-    <div>
-        <p>Enter your name to continue:</p>
-            <input type="text" name="name" placeholder="Enter your name" required>
-            <button id="goBtn" onclick="goToPage()">Continue</button>
-
-    </div>
-    </main>
+   <main>
+  <h1>Welcome to Gratuity Portal</h1>
+  
+  <div class="main-box">
+    <p>Enter your name to continue:</p>
+    <input type="text" id="nameInput" name="name" placeholder="Enter your name" required>
+    <button id="goBtn" onclick="goToPage()">Continue</button>
+  </div>
+</main>
     <footer class="footer">
-  <div class="footer-container">
+    <div class="footer-container">
 
     <!-- Logo and Description -->
     <div class="footer-logo-section">
-      <img src="./static/media/sail white logo 1.1a5b5ee342209483926a85aa53969a1f.svg" alt="SAIL Logo">
+      <img src="https://iitg.ac.in/sail/static/media/sail%20white%20logo%201.1a5b5ee342209483926a85aa53969a1f.svg" alt="SAIL Logo">
       <p>Student Alumni<br>Interaction Linkage</p>
 
       <div class="footer-social">
-        <a href="#"><i class="fa-brands fa-instagram"></i></a>
-        <a href="#"><i class="fa-brands fa-youtube"></i></a>
-        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-        <a href="#"><i class="fa-brands fa-facebook-messenger"></i></a>
+        <a href="https://www.instagram.com/sail_iitg/#" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://www.youtube.com/@IITGuwahatiSAIL" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-youtube"></i></a>
+        <a href="https://www.linkedin.com/authwall?trk=bf&trkInfo=AQFIJ_oCkyCaKwAAAZf97PuA7YwLkCthdfdL0R760jrfjNacTn5jS5ZaZw9H61a5Lo3FzIQAR87A7ljih84UMaoJksZGqwBIeiPtKnMWCgp62sroy0uq8xXRuimPpHBEPXaI_Qo=&original_referer=&sessionRedirect=https%3A%2F%2Fwww.linkedin.com%2Fcompany%2Fsail-iitg%2F" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="https://www.facebook.com/sail.iitg/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook-messenger"></i></a>
       </div>
     </div>
 
@@ -70,7 +64,7 @@
       <ul>
         <li><a href="https://www.iitg.ac.in/aer/" target="_blank">Alumni & External Relations</a></li>
         <li><a href="https://www.iitg.ac.in/" target="_blank">IIT Guwahati</a></li>
-        <li><a href="/sail/about">About Us</a></li>
+        <li><a href="https://iitg.ac.in/sail/about">About Us</a></li>
       </ul>
     </div>
 
@@ -90,7 +84,7 @@
   <!-- Copyright -->
   <div class="copyright">© 2025 SAIL All rights reserved.</div>
 </footer>
-
+</div>
 </body>
 <script src="script.js"></script>
 </html>
