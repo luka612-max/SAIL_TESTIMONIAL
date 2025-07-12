@@ -1,4 +1,4 @@
-/* GLOBAL STYLES */
+/* Reset default margins & paddings */
 * {
   margin: 0;
   padding: 0;
@@ -7,125 +7,219 @@
 
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f4f6f8;
+  background-color: #f5f7fa;
   color: #333;
   line-height: 1.6;
 }
-
-/* NAVBAR */
-.navbar {
-  background-color: #003366;
-  padding: 16px 0;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+/* Force the wrapper to fill entire viewport */
+html, body {
+  height: 100%;
+  margin: 0;
 }
 
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+
+/* Make main take available space */
+main {
+  flex: 1;
+}
+
+/* --------------------- NAVBAR --------------------- */
+.navbar {
+  background-color: #003366;
+  color: white;
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
 .navbar-content {
+  width: 100%;
   max-width: 1200px;
-  margin: auto;
-  padding: 0 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  flex-wrap: wrap;
 }
 
 .navbar-content-logo img {
-  height: 45px;
+  height: 40px;
+}
+
+.navbar-content-title p {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-left: 20px;
+  color: white;
 }
 
 .navbar-content-links {
   display: flex;
   align-items: center;
   gap: 20px;
-  flex-wrap: wrap;
 }
 
 .navbar-content-links-a {
   color: white;
   text-decoration: none;
-  font-weight: 600;
-  font-size: 15px;
-  padding: 8px 12px;
-  border-radius: 6px;
-  transition: background 0.3s;
+  font-weight: 500;
 }
-
 .navbar-content-links-a:hover {
-  background-color: #005599;
+  color: #ffcc00; /* Highlight color on hover */
 }
-
 .navbar-content-links-button {
-  background-color: crimson;
-  color: white;
-  border: none;
-  padding: 10px 16px;
+  background-color: #ffffff;
+  padding: 6px 14px;
   border-radius: 6px;
   font-weight: bold;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+  border: none;
 }
-
-.navbar-content-links-button:hover {
-  background-color: #a10000;
+.navbar-content-links-button-1 {
+  color: white;
+  background-color:red;
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-weight: bold;
+  border: none;
 }
-
-.navbar-dropdown img {
-  height: 10px;
-  margin-left: 5px;
-  vertical-align: middle;
-  opacity: 0.7;
+.navbar-content-links-button a {
+  color: #003366;
+  text-decoration: none;
 }
-
-/* HERO / MAIN CONTENT */
+.navbar-content-links-button-1 a {
+  color: white;
+  text-decoration: none;
+}
+/* --------------------- MAIN --------------------- */
 main {
-  max-width: 800px;
-  margin: 80px auto 40px auto;
-  padding: 40px 24px;
-  background-color: white;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  padding: 60px 20px;
   text-align: center;
 }
-
-main h1 {
-  font-size: 32px;
-  color: #003366;
-  margin-bottom: 20px;
+main::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0,0,0,0.4); /* Dark overlay */
+  z-index: 0;
+}
+main {
+  flex: 1;
+  padding: 60px 20px;
+  text-align: center;
+  background-image: url('./images/bg.jpg'); /* replace with your actual image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
 }
 
-main p {
-  font-size: 18px;
-  margin-bottom: 20px;
+/* Lifting the name entry box */
+.main-box {
+  background-color: rgba(255, 255, 255, 0.95); /* semi-transparent white */
+  padding: 30px 20px;
+  margin: 30px auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  width: 500px;
+  height: 220px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
-input[type="text"] {
-  width: 70%;
-  padding: 12px 14px;
-  font-size: 16px;
-  border: 2px solid #ccc;
+/* Style input and button nicely */
+.main-box input[type="text"] {
+  padding: 10px;
+  border: 1px solid #ccc;
   border-radius: 6px;
-  margin-bottom: 20px;
-  transition: border-color 0.3s;
+  font-size: 1rem;
+  width: 100%;
+}
+main {
+  flex: 1;
+  min-height: 100vh; /* ensures full screen height */
+  padding: 60px 20px;
+  text-align: center;
+
+  /* Background image styling */
+  background-image: url('./images/bg.jpg'); /* ✅ your image path */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* vertically center content */
+  align-items: center;
 }
 
-input[type="text"]:focus {
-  border-color: #003366;
-}
-
-#goBtn {
-  padding: 12px 24px;
-  font-size: 16px;
+.main-box button {
+  padding: 10px 20px;
   background-color: #003366;
   color: white;
   border: none;
   border-radius: 6px;
+  font-size: 1rem;
   cursor: pointer;
-  font-weight: bold;
   transition: background-color 0.3s;
 }
 
-#goBtn:hover {
-  background-color: #005599;
+.main-box button:hover {
+  background-color: #00224d;
+}
+
+main > * {
+  position: relative;
+  z-index: 1;
+}
+
+main h1 {
+  font-size: 2.4rem;
+  color:white;
+  margin-bottom: 20px;
+}
+
+main input[type="text"] {
+  padding: 10px;
+  width: 280px;
+  max-width: 90%;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin: 10px 20px;
+  font-size: 1rem;
+}
+
+main button {
+  padding: 10px 20px;
+  background-color: #003366;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-left: 10px;
+  transition: background-color 0.3s;
+}
+main {
+  flex: 1;
+  padding: 60px 20px;
+  text-align: center;
+  background-image: url('back_img.jpg'); /* ✅ Your image path */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: black; /* Ensure text is visible */
+}
+
+main button:hover {
+  background-color: #00224d;
 }
 
 /* FOOTER (MATCHING SAIL DESIGN) */
@@ -164,17 +258,18 @@ input[type="text"]:focus {
 
 .footer-social {
   display: flex;
-  gap: 14px;
-  font-size: 24px;
+  gap: 15px;
   margin-top: 10px;
 }
 
 .footer-social a {
   color: white;
-  transition: transform 0.2s ease;
+  font-size: 1.5rem;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .footer-social a:hover {
+  color: #ffcc00;
   transform: scale(1.2);
 }
 
@@ -221,4 +316,34 @@ input[type="text"]:focus {
   text-align: center;
   font-size: 13px;
   color: #ccc;
+}
+
+
+/* --------------------- RESPONSIVE --------------------- */
+@media (max-width: 768px) {
+  .navbar-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar-content-title p {
+    margin: 10px 0;
+  }
+
+  .navbar-content-links {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-column,
+  .footer-logo-section {
+    margin-bottom: 20px;
+  }
 }
