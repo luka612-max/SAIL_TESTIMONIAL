@@ -11,6 +11,9 @@ body {
   color: #333;
   line-height: 1.6;
 }
+html, body {
+  overflow-x: hidden;
+}
 /* Force the wrapper to fill entire viewport */
 html, body {
   height: 100%;
