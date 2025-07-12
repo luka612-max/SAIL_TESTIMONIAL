@@ -59,3 +59,28 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
+const department = document.querySelector(".form-control");
+
+department.addEventListener("change", function () {
+  const selectedValue = this.value;
+  const profCards = document.querySelectorAll(".prof-card");
+  let visibleCount = 0;
+
+  profCards.forEach(card => {
+    if (card.id === selectedValue) {
+      card.style.display = "flex";
+      visibleCount++;
+    } else {
+      card.style.display = "none";
+    }
+    console.log("Selected:", selectedValue.innerText);
+    console.log("Card ID:", card.id);
+
+  });
+
+  const noMatchMessage = document.getElementById("p2");
+  if (noMatchMessage) {
+    noMatchMessage.style.display = visibleCount === 0 ? "block" : "none";
+  }
+});
+
