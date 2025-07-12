@@ -131,6 +131,8 @@ main {
   display: flex;
   flex-direction: column;
   gap: 15px;
+  width: 90%;
+  max-width: 500px;
 }
 
 /* Style input and button nicely */
@@ -255,11 +257,12 @@ main button:hover {
   margin-bottom: 20px;
   color: white;
 }
-
 .footer-social {
   display: flex;
   gap: 15px;
   margin-top: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .footer-social a {
@@ -345,5 +348,64 @@ main button:hover {
   .footer-column,
   .footer-logo-section {
     margin-bottom: 20px;
+  }
+}
+
+
+
+@media (max-width: 768px) {
+  .navbar-content {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .navbar-content-logo img {
+    height: 32px;
+  }
+
+  .navbar-content-title p {
+    font-size: 1.2rem;
+    margin: 8px 0;
+  }
+
+  .navbar-content-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .main-box {
+    width: 90%;
+    padding: 20px;
+    height: auto;
+  }
+
+  main h1 {
+    font-size: 1.5rem;
+  }
+
+  main input[type="text"],
+  main button {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-column,
+  .footer-logo-section {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .footer-social {
+    justify-content: center;
+    flex-wrap: wrap;
   }
 }
