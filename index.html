@@ -5,15 +5,92 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <header>Welcome to Gratuity Portal</header>
+    <header>
+    <div class="navbar">
+  <div class="navbar-content">
+    <div class="navbar-content-logo">
+      <a href="/sail/">
+        <img src="./static/media/sail white logo 1.1a5b5ee342209483926a85aa53969a1f.svg" alt="logo">
+      </a>
+    </div>
+    <div class="navbar-hamburger ">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <div class="navbar-content-links ">
+      <a href="/sail/" class="navbar-content-links-a">Home</a>
+      <a href="/sail/about" class="navbar-content-links-a">About Us</a>
+      <div class="navbar-dropdown">
+        <p class="navbar-content-links-a">Initiative <img src="./static/media/dropdown_arrow.c4cedf650f7a106fd81490c7df1f580b.svg" alt="dropdown"></p>
+      </div>
+      <div class="navbar-dropdown">
+        <p class="navbar-content-links-a">Events <img src="./static/media/dropdown_arrow.c4cedf650f7a106fd81490c7df1f580b.svg" alt="dropdown"></p>
+      </div>
+      <div class="navbar-dropdown">
+        <p class="navbar-content-links-a">Yearbook <img src="./static/media/dropdown_arrow.c4cedf650f7a106fd81490c7df1f580b.svg" alt="dropdown"></p>
+      </div>
+      <a href="/sail/#service" class="navbar-content-links-a">Services</a>
+      <button class="navbar-content-links-button"><a href="https://www.iitg.ac.in/aer/donation.php">Donate</a></button>
+    </div>
+  </div>
+</div>
+  </header>
+    <main>
+    <h1>Welcome to Gratuity Portal</h1>
     <div>
         <p>Enter your name to continue:</p>
             <input type="text" name="name" placeholder="Enter your name" required>
             <button id="goBtn" onclick="goToPage()">Continue</button>
 
     </div>
+    </main>
+    <footer class="footer">
+  <div class="footer-container">
+
+    <!-- Logo and Description -->
+    <div class="footer-logo-section">
+      <img src="./static/media/sail white logo 1.1a5b5ee342209483926a85aa53969a1f.svg" alt="SAIL Logo">
+      <p>Student Alumni<br>Interaction Linkage</p>
+
+      <div class="footer-social">
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="#"><i class="fa-brands fa-facebook-messenger"></i></a>
+      </div>
+    </div>
+
+    <!-- Learn More -->
+    <div class="footer-column">
+      <h4>Learn More</h4>
+      <ul>
+        <li><a href="https://www.iitg.ac.in/aer/" target="_blank">Alumni & External Relations</a></li>
+        <li><a href="https://www.iitg.ac.in/" target="_blank">IIT Guwahati</a></li>
+        <li><a href="/sail/about">About Us</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact Us -->
+    <div class="footer-column">
+      <h4>Contact Us</h4>
+      <p>Call us:</p>
+      <p><a href="tel:+917020996986">+91-7020996986</a></p>
+      <p><a href="tel:+917060107025">+91-7060107025</a></p>
+      <p>Email us: <a href="mailto:SAIL@iitg.ac.in">SAIL@iitg.ac.in</a></p>
+    </div>
+  </div>
+
+  <!-- Divider -->
+  <div class="footer-line"></div>
+
+  <!-- Copyright -->
+  <div class="copyright">© 2025 SAIL All rights reserved.</div>
+</footer>
+
 </body>
 <script src="script.js"></script>
 </html>
